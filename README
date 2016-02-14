@@ -1,0 +1,63 @@
+Midi Notes Lite
+
+Last Revision:
+Version 1.0, 2011-05-17
+Build Requirements:
+iOS SDK 4.2 - Universal App
+Runtime Requirements:
+iOS 4.2 or later - requires coreMidi framework
+
+
+This sample application demonstrates how to receive and send midi messages to/from the coreMidi framework included in IOS from 4.2. Interface is a UITableView to log all notes captured. Click on UITableCell to send the note out.
+
+Use this file in your own projects as you see fit.
+Please email me at john@goodstadt.me.uk for any problems, fixes, addition or thanks.
+
+================================================================================
+Instructions:
+
+open MidiNotesLite.xcodeproj and run.
+
+================================================================================
+
+Apple Mac OSX Simulator (iPhone or iPad)
+
+1. Open Audio Midi Setup on OSX. Make sure MIDI window is checked (Window Menu->Show MIDI Window
+2. Double click on Network (in MIDI Studio)
+3. If Session box is empty click + and create a session - default is Session1
+4. Run the xcode project and "iPhone Simulator" should appear in the Directory box.
+5. Click Connect - this moves over to the Session box as a participant.
+6. This IP address should be automatically picked up, in Midi Notes Lite in the third line of the UITableView.
+
+7. When the above are complete you will need to generate MIDI notes. I recommend a simple software keyboard MdidKeys from http://www.manyetas.com/creed/midikeys  
+
+8. This will generate MIDI notes on the session which the simulator will pick up.
+9. Touching a UIViewCell with a midi note will send this note out.
+================================================================================ 
+
+iPhone, iPad or iPod Touch on OSX
+
+1. Complete top 3 Items in Apple MAC notes above.
+2. Run xcode project on iPhone/iPad/iPod Touch
+3. Connect the new device in OSX MIDI setup box
+4. See step 6 and above to test.
+
+
+================================================================================
+
+iPhone, iPad or iPod Touch and Microsoft Windows and a Midi Keyboard
+
+1. Plug Midi keyboard into Microsoft windows (USB)
+2. You will need an equivalent to OSX MIDI setup - I use Tobias Erichsen's rptMIDI - http://www.tobias-erichsen.de/rtpMIDI.html. you can also use his virtual keyboard for testing - http://www.tobias-erichsen.de/virtualKeys.html 
+3. All devices should be seen in the Directory box in rptMIDI - just as in OSX's MIDI Setup.
+4. The MIDI keyboard key presses will be picked up in Midi Notes Lite.
+
+================================================================================
+
+Code:
+
+To use midi receive/send indoor programs use the class midi.m/midi.h that has all the coreMidi routines and many helper conversion routines.
+
+
+Releases:
+V1.0 May 17, 2011
